@@ -1,0 +1,56 @@
+.log-panel {
+  max-height: 250px;
+}
+
+.log-entries {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.log-empty {
+  padding: 20px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.log-entry {
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  border-bottom: 1px solid var(--border-primary);
+  display: flex;
+  gap: 15px;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+.log-timestamp {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  font-size: 9px;
+}
+
+.log-message {
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+
+.log-entry.info .log-message {
+  color: var(--accent-cyan);
+}
+
+.log-entry.success .log-message {
+  color: var(--accent-green);
+}
+
+.log-entry.error .log-message {
+  color: var(--accent-red);
+}
+
+.log-entry.warning .log-message {
+  color: var(--accent-orange);
+}
